@@ -11695,16 +11695,22 @@ ul.typeahead-list > li > a {
  src: local('Droid Sans Mono'), url('fonts/droid-sans-mono.woff') format('woff');
 }
 @font-face {
- font-family: 'Lora';
- font-weight: normal;
- font-style: normal;
- src: local('Lora'), url('fonts/Lora-Regular.ttf') format('truetype');
-}
-@font-face {
  font-family: 'Exo_2';
  font-weight: normal;
  font-style: normal;
  src: local('Exo_2'), url('fonts/exo-II-regular.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'Source Code Pro';
+ font-weight: normal;
+ font-style: italic;
+ src: local('Source Code Pro'), url('fonts/source-code-pro-italic.otf') format('opentype');
+}
+@font-face {
+ font-family: 'Source Code Pro';
+ font-weight: normal;
+ font-style: normal;
+ src: local('Source Code Pro'), url('fonts/source-code-pro.otf') format('opentype');
 }
 @font-face {
  font-family: 'Fira Code';
@@ -11716,49 +11722,49 @@ div#notebook {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
  line-height: 170%;
- color: #f8f8f0;
+ color: #303030;
 }
 body,
 div.body {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
- color: #f8f8f0;
- background-color: #1e1e1e;
- background: #1e1e1e;
+ color: #303030;
+ background-color: #ffffff;
+ background: #ffffff;
 }
 body.notebook_app {
  padding: 0;
- background-color: #1e1e1e;
- background: #1e1e1e;
+ background-color: #ffffff;
+ background: #ffffff;
  padding-right: 0px !important;
  overflow-y: hidden;
 }
 a {
  font-family: "Exo_2", sans-serif;
- color: #f8f8f0;
+ color: #303030;
 }
 a:hover,
 a:focus {
- color: #f8f8f0;
+ color: #2f2f2f;
 }
 .list_header,
 div#notebook_list_header.row.list_header {
  font-size: 14pt;
- color: #f8f8f0;
- background-color: #1e1e1e;
+ color: #2f2f2f;
+ background-color: #ffffff;
 }
 div#cluster_list_header.row.list_header,
 div#running .row.list_header {
  font-size: 14pt;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
- border-bottom: 2px solid #232323;
+ color: #303030;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border-bottom: 2px solid rgba(180,180,180,.30);
 }
 div#cluster_list > div.list_item.row,
 div#cluster_list > div.list_item.row:hover {
- background: #232323;
- background-color: #232323;
+ background: #fafafa;
+ background-color: #fafafa;
 }
 div#clusters.tab-pane.active {
  font-size: 12.0pt;
@@ -11766,29 +11772,29 @@ div#clusters.tab-pane.active {
 }
 #running .panel-group .panel .panel-heading {
  font-size: 14pt;
- color: #f8f8f0;
+ color: #303030;
  padding: 8px 8px;
- background: #282828;
- background-color: #282828;
+ background: #eeeeee;
+ background-color: #eeeeee;
 }
 #running .panel-group .panel .panel-heading a {
  font-size: 14pt;
- color: #f8f8f0;
+ color: #303030;
 }
 #running .panel-group .panel .panel-heading a:focus,
 #running .panel-group .panel .panel-heading a:hover {
  font-size: 14pt;
- color: #f8f8f0;
+ color: #303030;
 }
 #running .panel-group .panel .panel-body .list_container .list_item {
- background: #232323;
- background-color: #232323;
+ background: #fafafa;
+ background-color: #fafafa;
  padding: 2px;
- border-bottom: 2px solid #232323;
+ border-bottom: 2px solid rgba(180,180,180,.30);
 }
 #running .panel-group .panel .panel-body .list_container .list_item:hover {
- background: #232323;
- background-color: #232323;
+ background: #fafafa;
+ background-color: #fafafa;
 }
 #running .panel-group .panel .panel-body {
  padding: 2px;
@@ -11807,7 +11813,7 @@ div.running_list_info.toolbar_info {
  padding: 0px;
 }
 #project_name > ul > li > a > i.fa.fa-home {
- color: #ae81ff;
+ color: #ff7823;
  font-size: 17pt;
  display: inline-block;
  position: static;
@@ -11831,7 +11837,7 @@ div#notebook_toolbar div.dynamic-instructions {
 .toolbar_info {
  font-family: "Exo_2", sans-serif;
  font-size: 12.0pt;
- color: #f8f8f0;
+ color: #303030;
  text-shadow: none;
  border: none;
  height: inherit;
@@ -11839,12 +11845,12 @@ div#notebook_toolbar div.dynamic-instructions {
 }
 .list_container {
  font-size: 12.0pt;
- color: #f8f8f0;
+ color: #303030;
  border: none;
  text-shadow: none !important;
 }
 .list_container > div {
- border-bottom: 1px solid rgba(73,72,62,.22);
+ border-bottom: 1px solid rgba(180,180,180,.14);
  font-size: 12.0pt;
 }
 .list_header > div,
@@ -11898,21 +11904,21 @@ input[type="checkbox"] {
 }
 .list_container a {
  font-size: 17px;
- color: #f8f8f0;
+ color: #303030;
  border: none;
  text-shadow: none !important;
  font-weight: normal;
  font-style: normal;
 }
 div.list_container a:hover {
- color: #f8f8f0;
+ color: #2f2f2f;
 }
 div.list_item:hover {
- background-color: rgba(73,72,62,.04);
+ background-color: #fafafa;
 }
 .breadcrumb > li {
  font-size: 12.0pt;
- color: #f8f8f0;
+ color: #303030;
  border: none;
  text-shadow: none !important;
 }
@@ -11929,14 +11935,14 @@ ul#tabs a {
  font-size: 13pt;
  font-weight: normal;
  font-style: normal;
- background: #1e1e1e;
+ background: #ffffff;
  text-shadow: none !important;
  border-color: transparent;
- border-bottom-color: rgba(73,72,62,.45);
+ border-bottom-color: rgba(180,180,180,.30);
 }
 .nav-tabs > li > a:hover {
- color: #f8f8f0;
- background-color: rgba(73,72,62,.22);
+ color: #2f2f2f;
+ background-color: rgba(180,180,180,.14);
 }
 .nav-tabs > li > a:active,
 .nav-tabs > li > a:focus,
@@ -11946,8 +11952,8 @@ ul#tabs a {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
- color: #f8f8f2;
- background-color: #49483e;
+ color: #1c1c1c;
+ background-color: #eeeeee;
  border: 1px solid transparent;
  border-bottom-color: transparent;
  cursor: default;
@@ -11955,11 +11961,11 @@ ul#tabs a {
 .nav > li > a:hover,
 .nav > li > a:focus {
  text-decoration: none;
- background-color: rgba(73,72,62,.22);
+ background-color: rgba(180,180,180,.14);
 }
 .nav > li.disabled > a,
 .nav > li.disabled > a:hover {
- color: #75715e;
+ color: #aaaaaa;
 }
 div#notebook {
  font-family: "Exo_2", sans-serif;
@@ -11967,11 +11973,11 @@ div#notebook {
  padding-top: 4px;
 }
 .notebook_app {
- background-color: #1e1e1e;
+ background-color: #ffffff;
 }
 #notebook-container {
  padding: 13px;
- background-color: #1e1e1e;
+ background-color: #ffffff;
  min-height: 0px;
  box-shadow: none;
  width: 980px;
@@ -11992,29 +11998,29 @@ div#ipython-main-app.container {
 }
 .notebook_app #header {
  box-shadow: none !important;
- background-color: #1e1e1e;
- border-bottom: 2px solid rgba(73,72,62,.22);
+ background-color: #ffffff;
+ border-bottom: 2px solid rgba(180,180,180,.14);
 }
 #header {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
  box-shadow: none;
- background-color: #1e1e1e;
+ background-color: #ffffff;
 }
 #header .header-bar {
- background: #1e1e1e;
- background-color: #1e1e1e;
+ background: #ffffff;
+ background-color: #ffffff;
 }
 body > #header .header-bar {
  width: 100%;
- background: #1e1e1e;
+ background: #ffffff;
 }
 #menubar {
- background-color: #1e1e1e;
+ background-color: #ffffff;
 }
 #menubar .navbar,
 .navbar-default {
- background-color: #1e1e1e;
+ background-color: #ffffff;
  margin-bottom: 0px;
  margin-top: 3px;
 }
@@ -12029,15 +12035,15 @@ div.navbar-text,
 .navbar-default {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
- background-color: #1e1e1e;
- border-color: #49483e;
+ background-color: #ffffff;
+ border-color: rgba(180,180,180,.14);
  line-height: 1.5em;
  padding-bottom: 0px;
 }
 .navbar-default .navbar-nav > li > a {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
- color: #f8f8f0;
+ color: #303030;
  display: block;
  line-height: 1.5em;
  padding-top: 9px;
@@ -12045,22 +12051,22 @@ div.navbar-text,
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
- color: #f8f8f0;
- background-color: rgba(73,72,62,.22);
- border-color: #49483e;
+ color: #2f2f2f;
+ background-color: rgba(180,180,180,.14);
+ border-color: rgba(180,180,180,.14);
  line-height: 1.5em;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
- color: #f8f8f2;
- background-color: #49483e;
- border-color: #49483e;
+ color: #1c1c1c;
+ background-color: rgba(180,180,180,.14);
+ border-color: rgba(180,180,180,.14);
  line-height: 1.5em;
 }
 .edit_mode .modal_indicator:before {
  font-size: 15pt;
- color: #66d9ef;
+ color: #2c85f7;
  content: "\f040";
  padding-top: 5px;
  padding-bottom: 0px;
@@ -12075,39 +12081,39 @@ div.navbar-text,
  vertical-align: bottom;
 }
 .item_icon {
- color: #66d9ef;
+ color: #126dce;
 }
 .item_buttons .kernel-name {
  font-size: 13pt;
- color: #66d9ef;
+ color: #126dce;
  line-height: 22px;
 }
 .running_notebook_icon:before {
- color: #a6e22e !important;
+ color: #009e07 !important;
 }
 .item_buttons .running-indicator {
  padding-top: 2px;
- color: #a6e22e;
+ color: #009e07;
 }
 #modal_indicator {
  float: right !important;
- color: #66d9ef;
- background: #1e1e1e;
- background-color: #1e1e1e;
+ color: #126dce;
+ background: #ffffff;
+ background-color: #ffffff;
 }
 #kernel_indicator {
  float: right !important;
- color: #ae81ff;
- background: #1e1e1e;
- background-color: #1e1e1e;
+ color: #ff7823;
+ background: #ffffff;
+ background-color: #ffffff;
  font-size: 15pt;
- border-left: 2px solid #ae81ff;
+ border-left: 2px solid #ff7823;
  padding-bottom: 2px;
 }
 #kernel_indicator .kernel_indicator_name {
- color: #ae81ff;
- background: #1e1e1e;
- background-color: #1e1e1e;
+ color: #ff7823;
+ background: #ffffff;
+ background-color: #ffffff;
  font-size: 15pt;
  padding-left: 5px;
  padding-right: 5px;
@@ -12116,9 +12122,9 @@ div.navbar-text,
  padding-bottom: 0px;
 }
 #kernel_indicator .kernel_indicator_name {
- color: #ae81ff;
- background: #1e1e1e;
- background-color: #1e1e1e;
+ color: #ff7823;
+ background: #ffffff;
+ background-color: #ffffff;
  font-size: 13.5pt;
  padding-left: 5px;
  padding-right: 5px;
@@ -12140,9 +12146,9 @@ div.notification_widget.info,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:hover,
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn:focus {
- color: #66d9ef;
- background-color: #1e1e1e;
- border-color: #1e1e1e;
+ color: #126dce;
+ background-color: #ffffff;
+ border-color: #ffffff;
 }
 #notification_area,
 div.notification_area {
@@ -12174,16 +12180,16 @@ i.fa.fa-icon {
  box-shadow: none;
  padding: 0px;
  text-align: left;
- border: 2px solid #232323;
- background-color: #232323;
- background: #232323;
+ border: 2px solid rgba(180,180,180,.30);
+ background-color: #ffffff;
+ background: #ffffff;
  line-height: 1.3;
 }
 .dropdown-menu:hover {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
- border: 2px solid #232323;
- background-color: #232323;
+ border: 2px solid rgba(180,180,180,.30);
+ background-color: #ffffff;
  box-shadow: none;
  line-height: 1.3;
 }
@@ -12191,7 +12197,7 @@ i.fa.fa-icon {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
  display: block;
- color: #ae81ff;
+ color: #ff7823;
  text-decoration: underline;
  white-space: nowrap;
  padding: 8px 0px 0px 6px;
@@ -12203,21 +12209,21 @@ i.fa.fa-icon {
  line-height: 1.3;
  display: block;
  padding: 10px 25px 10px 14px;
- color: #f8f8f0;
- background-color: #232323;
- background: #232323;
+ color: #303030;
+ background-color: #ffffff;
+ background: #ffffff;
 }
 .dropdown-menu > li > a:hover {
- color: #f8f8f0;
- background-color: #49483e;
- background: #49483e;
- border-color: #49483e;
+ color: #2f2f2f;
+ background-color: rgba(180,180,180,.14);
+ background: rgba(180,180,180,.14);
+ border-color: rgba(180,180,180,.14);
 }
 .dropdown-menu .divider {
  height: 2px;
  margin: 0px 0px;
  overflow: hidden;
- background-color: rgba(73,72,62,.45);
+ background-color: rgba(180,180,180,.30);
 }
 .dropdown-submenu > .dropdown-menu {
  top: 0;
@@ -12232,7 +12238,7 @@ i.fa.fa-icon {
  font-family: "Exo_2", sans-serif;
  font-size: 12.0pt;
  font-weight: normal;
- color: #75715e;
+ color: #aaaaaa;
  padding: none;
  display: block;
  clear: both;
@@ -12240,14 +12246,14 @@ i.fa.fa-icon {
  white-space: nowrap;
 }
 .dropdown-submenu > a:after {
- color: #f8f8f0;
+ color: #303030;
  margin-right: -16px;
 }
 .dropdown-submenu:hover > a:after,
 .dropdown-submenu:active > a:after,
 .dropdown-submenu:focus > a:after,
 .dropdown-submenu:visited > a:after {
- color: #ae81ff;
+ color: #ff7823;
  margin-right: -16px;
 }
 div.kse-dropdown > .dropdown-menu,
@@ -12258,10 +12264,10 @@ div.kse-dropdown > .dropdown-menu,
 .btn,
 .btn-default {
  font-family: "Exo_2", sans-serif;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
- border: 2px solid #252525;
+ color: #303030;
+ background: #ebebeb;
+ background-color: #ebebeb;
+ border: 2px solid #e8e8e8;
  font-weight: normal;
  box-shadow: none;
  text-shadow: none;
@@ -12274,10 +12280,10 @@ div.kse-dropdown > .dropdown-menu,
 .btn-default:hover,
 .open > .dropdown-toggle.btn-default:hover,
 .open > .dropdown-toggle.btn:hover {
- color: #f8f8f0;
- background-color: #303030;
- background: #303030;
- border-color: #303030;
+ color: #2f2f2f;
+ background-color: #e4e4e4;
+ background: #e4e4e4;
+ border-color: #e4e4e4;
  background-image: none;
  box-shadow: none !important;
  border-radius: 2px;
@@ -12301,10 +12307,10 @@ div.kse-dropdown > .dropdown-menu,
 .open > .dropdown-toggle.btn:focus,
 .open > .dropdown-toggle.btn.focus,
 .open > .dropdown-toggle.btn-default {
- color: #f8f8f2;
- background-color: #49483e;
- background: #49483e;
- border-color: #49483e;
+ color: #1c1c1c;
+ background-color: #e4e4e4;
+ background: #e4e4e4;
+ border-color: #e4e4e4;
  background-image: none;
  box-shadow: none !important;
  border-radius: 1px;
@@ -12313,17 +12319,17 @@ div.kse-dropdown > .dropdown-menu,
 .item_buttons > .btn-group,
 .item_buttons > .input-group {
  margin-left: 5px;
- background: #282828;
- background-color: #282828;
- border: 1px solid #282828;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border: 1px solid #eeeeee;
 }
 .item_buttons > .btn:hover,
 .item_buttons > .btn-group:hover,
 .item_buttons > .input-group:hover {
  margin-left: 5px;
- background: #212121;
- background-color: #212121;
- border: 1px solid #212121;
+ background: #e9e9e9;
+ background-color: #e9e9e9;
+ border: 1px solid #e9e9e9;
 }
 .btn-group > .btn-mini,
 .btn-sm,
@@ -12352,7 +12358,7 @@ div.kse-dropdown > .dropdown-menu,
  vertical-align: bottom;
  margin-left: -.5ex;
  display: -webkit-inline-box;
- border: soldi 1px #282828;
+ border: soldi 1px #ebebeb;
 }
 .alternate_upload .btn-upload {
  height: 22px;
@@ -12369,23 +12375,23 @@ button.close {
  display: inline-block;
 }
 .close {
- color: #f92672;
+ color: #de143d;
  opacity: .5;
  text-shadow: none;
 }
 .close:hover {
- color: #f92672;
+ color: #de143d;
  opacity: 1;
 }
 div.btn.btn-default.output_collapsed {
- background: #232323;
- background-color: #232323;
- border-color: #232323;
+ background: #e9e9e9;
+ background-color: #e9e9e9;
+ border-color: #e9e9e9;
 }
 div.btn.btn-default.output_collapsed:hover {
- background: #1c1c1c;
- background-color: #1c1c1c;
- border-color: #1c1c1c;
+ background: #e4e4e4;
+ background-color: #e4e4e4;
+ border-color: #e4e4e4;
 }
 div.nbext-enable-btns .btn[disabled],
 div.nbext-enable-btns .btn[disabled]:hover,
@@ -12400,29 +12406,29 @@ fieldset[disabled] .btn-default:focus,
 .btn-default.disabled.focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
- color: #888888;
- background: #252525;
- background-color: #252525;
- border-color: #252525;
+ color: #4a4a4a;
+ background: #e8e8e8;
+ background-color: #e8e8e8;
+ border-color: #e8e8e8;
 }
 .input-group-addon {
  padding: 2px 5px;
  font-size: 12.0pt;
  font-weight: normal;
  height: auto;
- color: #f8f8f0;
+ color: #303030;
  text-align: center;
- background-color: #282828;
+ background-color: #ffffff;
  border: none;
 }
 .btn-group > .btn + .dropdown-toggle {
  padding-left: 8px;
  padding-right: 8px;
  height: 100%;
- border-left: 2px solid #ae81ff !important;
+ border-left: 2px solid #ff7823 !important;
 }
 .btn-group > .btn + .dropdown-toggle:hover {
- border-left: 2px solid #ae81ff !important;
+ border-left: 2px solid #ff7823 !important;
 }
 .input-group-btn {
  position: relative;
@@ -12431,51 +12437,51 @@ fieldset[disabled] .btn-default.focus {
 }
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group {
- background: #282828;
- background-color: #282828;
- border: 1px solid #252525;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border: 1px solid #ebebeb;
  margin: 2px;
  font-size: inherit;
 }
 .input-group-btn:first-child > .btn:hover,
 .input-group-btn:first-child > .btn-group:hover {
- background: #212121;
- background-color: #212121;
- border: 1px solid #212121;
+ background: #e9e9e9;
+ background-color: #e9e9e9;
+ border: 1px solid #e9e9e9;
  margin: 2px;
  font-size: inherit;
 }
 div.modal .btn-group > .btn:first-child {
- background: #282828;
- background-color: #282828;
- border: 1px solid #252525;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border: 1px solid #ebebeb;
  margin-top: 0px !important;
  margin-left: 0px;
  margin-bottom: 2px;
 }
 div.modal .btn-group > .btn:first-child:hover {
- background: #212121;
- background-color: #212121;
- border: 1px solid #212121;
+ background: #e9e9e9;
+ background-color: #e9e9e9;
+ border: 1px solid #e9e9e9;
 }
 div.modal > button,
 div.modal-footer > button {
- background: #282828;
- background-color: #282828;
- border-color: #282828;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border-color: #eeeeee;
 }
 div.modal > button:hover,
 div.modal-footer > button:hover {
- background: #212121;
- background-color: #212121;
- border-color: #212121;
+ background: #e9e9e9;
+ background-color: #e9e9e9;
+ border-color: #e9e9e9;
 }
 .modal-content {
  font-family: "Exo_2", sans-serif;
  font-size: 12.0pt;
  position: relative;
- background: #282828;
- background-color: #282828;
+ background: #eeeeee;
+ background-color: #eeeeee;
  border: none;
  border-radius: 1px;
  background-clip: padding-box;
@@ -12484,34 +12490,34 @@ div.modal-footer > button:hover {
 .modal-header {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
- border-color: #232323;
+ color: #303030;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border-color: rgba(180,180,180,.30);
  padding: 12px;
  min-height: 16.4286px;
 }
 .modal-content h4 {
  font-family: "Exo_2", sans-serif;
  font-size: 16pt;
- color: #f8f8f0;
+ color: #303030;
  padding: 5px;
 }
 .modal-body {
- background-color: #232323;
+ background-color: #ffffff;
  position: relative;
  padding: 15px;
 }
 .modal-footer {
  padding: 10px;
  text-align: right;
- background-color: #232323;
- border-top: 1px solid #232323;
+ background-color: #fafafa;
+ border-top: 1px solid rgba(180,180,180,.30);
 }
 .alert-info {
- background-color: #4a5467;
- border-color: #232323;
- color: #f8f8f0;
+ background-color: #fdfdfd;
+ border-color: rgba(180,180,180,.30);
+ color: #303030;
 }
 .modal-header .close {
  margin-top: -5px;
@@ -12520,7 +12526,7 @@ div.modal-footer > button:hover {
 .modal-backdrop,
 .modal-backdrop.in {
  opacity: 0.85;
- background-color: #49483e;
+ background-color: #d6d6d6;
 }
 div.panel,
 div.panel-default,
@@ -12528,8 +12534,8 @@ div.panel-default,
 .panel-default {
  font-family: "Exo_2", sans-serif;
  font-size: 12.0pt;
- background-color: #232323;
- color: #f8f8f0;
+ background-color: #fafafa;
+ color: #303030;
  margin-bottom: 14px;
  border: 0;
  box-shadow: none;
@@ -12537,9 +12543,9 @@ div.panel-default,
 div.panel > .panel-heading,
 div.panel-default > .panel-heading {
  font-size: 14pt;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
+ color: #303030;
+ background: #eeeeee;
+ background-color: #eeeeee;
  border: 0;
 }
 .modal .modal-dialog {
@@ -12556,9 +12562,9 @@ div.form-control,
 .form-control {
  font-family: "Exo_2", sans-serif;
  font-size: inherit;
- color: #f8f8f0;
- background-color: #282828;
- border: 2px solid #282828;
+ color: #303030;
+ background-color: #ffffff;
+ border: 2px solid #e7e7e7;
  margin-left: 2px;
  height: auto;
  box-shadow: none;
@@ -12566,18 +12572,18 @@ div.form-control,
  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
 .form-group.list-group-item {
- color: #f8f8f0;
- background-color: #232323;
- border-color: #232323;
+ color: #303030;
+ background-color: #fafafa;
+ border-color: rgba(180,180,180,.30);
  margin-bottom: 0px;
 }
 input,
 button,
 select,
 textarea {
- background-color: #282828;
+ background-color: #ffffff;
  font-weight: normal;
- border: 1px solid #232323;
+ border: 1px solid rgba(180,180,180,.30);
 }
 select.form-control.select-xs {
  height: auto;
@@ -12587,23 +12593,23 @@ div.output.output_scroll {
 }
 ::-webkit-scrollbar-track {
  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.11);
- background-color: #49483e;
+ background-color: #d0d0d0;
  border-radius: 6px;
 }
 ::-webkit-scrollbar {
  width: 14px;
  height: 20px;
- background-color: #49483e;
+ background-color: #d0d0d0;
  border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb {
  background-color: #ffffff;
- background-image: -webkit-gradient(linear,40% 0%,75% 86%,from(#3e3d35 ),color-stop(0.5,#5a584c ),to(#3e3d35 ));
+ background-image: -webkit-gradient(linear,40% 0%,75% 86%,from(#ff6b0f ),color-stop(0.5,#ff8b42 ),to(#ff6b0f ));
  min-height: 100px;
  border-radius: 2px;
 }
 div.input_area {
- background-color: #282828;
+ background-color: #efefef;
  padding-right: 1.2em;
  border: 0px;
  border-top-left-radius: 0px;
@@ -12613,33 +12619,33 @@ div.input_area {
 }
 div.cell {
  padding: 0px;
- background: #282828;
- background-color: #282828;
- border: medium solid #1e1e1e;
+ background: #efefef;
+ background-color: #efefef;
+ border: medium solid #ffffff;
  border-top-right-radius: 2px;
  border-top-left-radius: 2px;
 }
 div.cell.selected {
- background: #282828;
- background-color: #282828;
- border: medium solid #49483e;
+ background: #efefef;
+ background-color: #efefef;
+ border: medium solid #ff7823;
  padding: 0px;
  border-top-right-radius: 2px;
  border-top-left-radius: 2px;
 }
 .edit_mode div.cell.selected {
  padding: 0px;
- background: #282828;
- background-color: #282828;
- border: medium solid #cccccc;
+ background: #efefef;
+ background-color: #efefef;
+ border: medium solid #ffd5bb;
  border-top-right-radius: 2px;
  border-top-left-radius: 2px;
 }
 div.cell.edit_mode {
  padding: 0px;
- background: #282828;
- background-color: #282828;
- border: medium solid #cccccc;
+ background: #efefef;
+ background-color: #efefef;
+ border: medium solid #ffd5bb;
  border-top-right-radius: 2px;
  border-top-left-radius: 2px;
 }
@@ -12657,7 +12663,7 @@ div.prompt,
  font-family: "Fira Code", monospace;
  font-size: 9.5pt;
  font-weight: normal;
- color: #75715e;
+ color: #aaaaaa;
  line-height: 170%;
  padding: 0px;
  padding-top: 4px;
@@ -12667,7 +12673,7 @@ div.prompt,
  width: 12ex;
 }
 div.prompt.input_prompt {
- background-color: #282828;
+ background-color: #efefef;
  border-top-left-radius: 2px;
  border-top-right-radius: 0px;
  border-bottom-left-radius: 0px;
@@ -12676,10 +12682,10 @@ div.prompt.input_prompt {
  width: 12ex !important;
 }
 div.cell.code_cell .input_prompt {
- border-right: 2px solid #a6e22e;
+ border-right: 2px solid rgba(240,147,43,.50);
 }
 div.output_wrapper {
- background-color: #232323;
+ background-color: #ffffff;
  border: 0px;
  margin-bottom: 0em;
  margin-top: 0em;
@@ -12693,8 +12699,8 @@ div.output_subarea.output_text {
  font-family: "Droid Sans Mono", monospace;
  font-size: 10.0pt;
  line-height: 150% !important;
- background-color: #232323;
- color: #f8f8f0;
+ background-color: #ffffff;
+ color: #303030;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
  border-bottom-left-radius: 2px;
@@ -12704,7 +12710,7 @@ div.output_area pre {
  font-family: "Droid Sans Mono", monospace;
  font-size: 10.0pt;
  line-height: 150% !important;
- color: #f8f8f0;
+ color: #303030;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
  border-bottom-left-radius: 2px;
@@ -12716,9 +12722,9 @@ div.output_area {
 div.output_html {
  font-family: "Droid Sans Mono", monospace;
  font-size: 10.0pt;
- color: #cccccc;
- background-color: #232323;
- background: #232323;
+ color: #353535;
+ background-color: #ffffff;
+ background: #ffffff;
 }
 div.output_subarea {
  overflow-x: auto;
@@ -12732,8 +12738,8 @@ div.output_subarea {
 div.prompt.output_prompt {
  font-family: "Fira Code", monospace;
  font-size: 9.5pt;
- background-color: #232323;
- color: #232323;
+ background-color: #ffffff;
+ color: #ffffff;
  border-bottom-left-radius: 2px;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
@@ -12744,7 +12750,7 @@ div.prompt.output_prompt {
 div.out_prompt_overlay.prompt {
  font-family: "Fira Code", monospace;
  font-size: 9.5pt;
- background-color: #232323;
+ background-color: #ffffff;
  border-bottom-left-radius: 2px;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
@@ -12753,8 +12759,8 @@ div.out_prompt_overlay.prompt {
  width: 12ex;
 }
 div.out_prompt_overlay.prompt:hover {
- background-color: #232323;
- box-shadow: #49483e 2px 1px 2px 2.5px inset;
+ background-color: #ffffff;
+ box-shadow: #e8e8e8 2px 1px 2px 2.5px inset;
  border-bottom-left-radius: 2px;
  -webkit-border-: 2px;
  -moz-border-radius: 2px;
@@ -12766,53 +12772,53 @@ div.out_prompt_overlay.prompt:hover {
 div.text_cell,
 div.text_cell_render pre,
 div.text_cell_render {
- font-family: "Lora", serif;
- font-size: 13pt;
+ font-family: "Source Code Pro", monospace;
+ font-size: 12pt;
  line-height: 170% !important;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
+ color: #353535;
+ background: #ffffff;
+ background-color: #ffffff;
  border-radius: 2px;
 }
 div.cell.text_cell.rendered.selected {
- font-family: "Lora", serif;
- border: medium solid #49483e;
+ font-family: "Source Code Pro", monospace;
+ border: medium solid #126dce;
  line-height: 170% !important;
- background: #282828;
- background-color: #282828;
+ background: #ffffff;
+ background-color: #ffffff;
  border-radius: 2px;
 }
 div.cell.text_cell.unrendered.selected {
- font-family: "Lora", serif;
+ font-family: "Source Code Pro", monospace;
  line-height: 170% !important;
- background: #282828;
- background-color: #282828;
- border: medium solid #49483e;
+ background: #ffffff;
+ background-color: #ffffff;
+ border: medium solid #126dce;
  border-radius: 2px;
 }
 div.cell.text_cell.selected {
- font-family: "Lora", serif;
+ font-family: "Source Code Pro", monospace;
  line-height: 170% !important;
- border: medium solid #49483e;
- background: #282828;
- background-color: #282828;
+ border: medium solid #126dce;
+ background: #ffffff;
+ background-color: #ffffff;
  border-radius: 2px;
 }
 .edit_mode div.cell.text_cell.selected {
- font-family: "Lora", serif;
+ font-family: "Source Code Pro", monospace;
  line-height: 170% !important;
- background: #282828;
- background-color: #282828;
- border: medium solid #cccccc;
+ background: #ffffff;
+ background-color: #ffffff;
+ border: medium solid #87b0db;
  border-radius: 2px;
 }
 div.text_cell.unrendered,
 div.text_cell.unrendered.selected,
 div.edit_mode div.text_cell.unrendered {
- font-family: "Lora", serif;
+ font-family: "Source Code Pro", monospace;
  line-height: 170% !important;
- background: #282828;
- background-color: #282828;
+ background: #ffffff;
+ background-color: #ffffff;
  border-radius: 2px;
 }
 div.cell.text_cell .input_prompt {
@@ -12822,28 +12828,28 @@ div.cell.text_cell.rendered .input_prompt {
  font-family: "Fira Code", monospace;
  font-size: 9.5pt;
  font-weight: normal;
- color: #75715e;
+ color: #aaaaaa;
  text-align: left !important;
- min-width: 12ex;
- width: 12ex !important;
- background-color: #282828;
+ min-width: 0ex;
+ width: 0ex !important;
+ background-color: #ffffff;
 }
 div.cell.text_cell.unrendered .input_prompt {
  font-family: "Fira Code", monospace;
  font-size: 9.5pt;
  font-weight: normal;
- color: #75715e;
+ color: #aaaaaa;
  text-align: left !important;
- min-width: 12ex;
- width: 12ex !important;
+ min-width: 0ex;
+ width: 0ex !important;
 }
 div.rendered_html code {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt;
  padding-top: 3px;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
+ color: #303030;
+ background: #efefef;
+ background-color: #efefef;
 }
 pre,
 code,
@@ -12855,15 +12861,15 @@ code {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt !important;
  line-height: 170% !important;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
+ color: #353535;
+ background: #efefef;
+ background-color: #efefef;
 }
 kbd {
  padding: 4px;
  font-size: 11pt;
- color: #f8f8f0;
- background-color: #282828;
+ color: #303030;
+ background-color: #efefef;
  border: 0;
  box-shadow: none;
 }
@@ -12873,23 +12879,23 @@ pre {
  margin: 0 0 9px;
  font-size: 12.0pt;
  line-height: 1.42857143;
- color: #f8f8f0;
- background-color: #282828;
- border: 1px solid #282828;
+ color: #303030;
+ background-color: #efefef;
+ border: 1px solid #e7e7e7;
  border-radius: 2px;
 }
 div.rendered_html {
- color: #f8f8f0;
+ color: #353535;
 }
 div.rendered_html pre,
 div.text_cell_render pre {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt !important;
  line-height: 170% !important;
- color: #f8f8f0;
- background: #282828;
- background-color: #282828;
- border: 2px #282828 solid;
+ color: #353535;
+ background: #efefef;
+ background-color: #efefef;
+ border: 2px #e7e7e7 solid;
  max-width: 86%;
  border-radius: 2px;
  padding: 5px;
@@ -12916,7 +12922,7 @@ div.rendered_html h5 {
 }
 .rendered_html h1,
 .text_cell_render h1 {
- color: #a6e22e;
+ color: #126dce;
  font-size: 220%;
  text-align: center;
  font-weight: lighter;
@@ -12925,14 +12931,14 @@ div.rendered_html h5 {
 .text_cell_render h2 {
  text-align: left;
  font-size: 170%;
- color: #a6e22e;
+ color: #126dce;
  font-style: normal;
  font-weight: lighter;
 }
 .rendered_html h3,
 .text_cell_render h3 {
  font-size: 150%;
- color: #a6e22e;
+ color: #126dce;
  font-weight: lighter;
  text-decoration: italic;
  font-style: normal;
@@ -12940,14 +12946,14 @@ div.rendered_html h5 {
 .rendered_html h4,
 .text_cell_render h4 {
  font-size: 120%;
- color: #a6e22e;
+ color: #126dce;
  font-weight: underline;
  font-style: normal;
 }
 .rendered_html h5,
 .text_cell_render h5 {
  font-size: 100%;
- color: #f8f8f0;
+ color: #2f2f2f;
  font-weight: lighter;
  text-decoration: underline;
 }
@@ -12957,33 +12963,33 @@ div.rendered_html h5 {
  font-family: "Fira Code", monospace;
  font-size: 10.0pt !important;
  line-height: 150% !important;
- border: 1px solid #49483e;
- color: #cccccc;
- background-color: #282828;
- background: #282828;
+ border: 1px solid #d6d6d6;
+ color: #353535;
+ background-color: #ffffff;
+ background: #ffffff;
 }
 table.dataframe,
 .rendered_html tr,
 .dataframe * {
  font-family: "Fira Code", monospace;
  font-size: 10.0pt !important;
- border: 1px solid #49483e;
+ border: 1px solid #d6d6d6;
 }
 .dataframe th,
 .rendered_html th {
  font-family: "Exo_2", sans-serif;
  font-size: 11pt !important;
  font-weight: bold;
- border: 1px solid #49483e;
- background: #282828;
+ border: 1px solid #c4c4c4;
+ background: #eeeeee;
 }
 .dataframe td,
 .rendered_html td {
  font-family: "Fira Code", monospace;
  font-size: 10.0pt !important;
- color: #cccccc;
- background: #282828;
- border: 1px solid #49483e;
+ color: #353535;
+ background: #ffffff;
+ border: 1px solid #d6d6d6;
  text-align: left;
  min-width: 4em;
 }
@@ -12992,21 +12998,21 @@ table.dataframe,
  font-family: "Exo_2", sans-serif;
  font-size: 11pt !important;
  font-weight: bold;
- color: #cccccc;
- border: 1px solid #49483e;
- background: #282828;
+ color: #353535;
+ border: 1px solid #d6d6d6;
+ background: #eeeeee;
 }
 div.widget-area {
- background-color: #232323;
- background: #232323;
- color: #f8f8f0;
+ background-color: #ffffff;
+ background: #ffffff;
+ color: #303030;
 }
 div.widget-area a {
  font-family: "Exo_2", sans-serif;
  font-size: 12.0pt;
  font-weight: normal;
  font-style: normal;
- color: #f8f8f0;
+ color: #303030;
  text-shadow: none !important;
 }
 div.widget-area a:hover,
@@ -13015,18 +13021,18 @@ div.widget-area a:focus {
  font-size: 12.0pt;
  font-weight: normal;
  font-style: normal;
- color: #f8f8f0;
- background: rgba(73,72,62,.22);
- background-color: rgba(73,72,62,.22);
+ color: #2f2f2f;
+ background: rgba(180,180,180,.14);
+ background-color: rgba(180,180,180,.14);
  border-color: transparent;
  background-image: none;
  text-shadow: none !important;
 }
 div.widget_item.btn-group > button.btn.btn-default.widget-combo-btn,
 div.widget_item.btn-group > button.btn.btn-default.widget-combo-btn:hover {
- background: #282828;
- background-color: #282828;
- border: 2px solid #282828 !important;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border: 2px solid #eeeeee !important;
  font-size: inherit;
  z-index: 0;
 }
@@ -13050,7 +13056,7 @@ div.widget-hbox .widget-label,
  height: 20px;
  margin-bottom: 10px;
  padding-left: 10px;
- background-color: #938e78;
+ background-color: #c6c6c6;
  border-radius: 4px;
  -webkit-box-shadow: none;
  box-shadow: none;
@@ -13058,30 +13064,30 @@ div.widget-hbox .widget-label,
 .rendered_html :link {
  font-family: "Exo_2", sans-serif;
  font-size: 100%;
- color: #66d9ef;
+ color: #2c85f7;
  text-decoration: underline;
 }
 .rendered_html :visited,
 .rendered_html :visited:active,
 .rendered_html :visited:focus {
- color: #7bcbda;
+ color: #2e6eb2;
 }
 .rendered_html :visited:hover,
 .rendered_html :link:hover {
  font-family: "Exo_2", sans-serif;
  font-size: 100%;
- color: #aaee22;
+ color: #eb6a18;
 }
 a.anchor-link:link:hover {
  font-size: inherit;
- color: #aaee22;
+ color: #eb6a18;
 }
 a.anchor-link:link {
  font-size: inherit;
  text-decoration: none;
  padding: 0px 20px;
  visibility: none;
- color: #a6e22e;
+ color: #126dce;
 }
 .navbar-text {
  margin-top: 4px;
@@ -13102,8 +13108,8 @@ div.nbext-readme > .nbext-readme-contents > .rendered_html {
  font-size: 12pt;
  line-height: 145%;
  padding: 1em 1em;
- color: #f8f8f0;
- background-color: #282828;
+ color: #353535;
+ background-color: #ffffff;
  -webkit-box-shadow: none;
  -moz-box-shadow: none;
  box-shadow: none;
@@ -13124,11 +13130,11 @@ div.nbext-readme > .nbext-readme-contents:not(:empty) {
  margin-top: 0.5em;
  margin-bottom: 2em;
  border: none;
- border-top-color: #232323;
+ border-top-color: rgba(180,180,180,.30);
 }
 .nbext-showhide-incompat {
  padding-bottom: 0.5em;
- color: #888888;
+ color: #4a4a4a;
  font-size: 12.0pt;
 }
 .shortcut_key,
@@ -13140,56 +13146,56 @@ span.shortcut_key {
 }
 mark,
 .mark {
- background-color: #282828;
- color: #f8f8f0;
+ background-color: #ffffff;
+ color: #353535;
  padding: .15em;
 }
 a.text-warning,
 a.text-warning:hover {
- color: #75715e;
+ color: #aaaaaa;
 }
 a.text-warning.bg-warning {
- background-color: #1e1e1e;
+ background-color: #ffffff;
 }
 span.bg-success.text-success {
  background-color: transparent;
- color: #a6e22e;
+ color: #009e07;
 }
 span.bg-danger.text-danger {
- background-color: #1e1e1e;
- color: #f92672;
+ background-color: #ffffff;
+ color: #de143d;
 }
 .has-success .input-group-addon {
- color: #a6e22e;
+ color: #009e07;
  border-color: transparent;
  background: inherit;
  background-color: rgba(83,180,115,.10);
 }
 .has-success .form-control {
- border-color: #a6e22e;
+ border-color: #009e07;
  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
  box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
 }
 .has-error .input-group-addon {
- color: #f92672;
+ color: #de143d;
  border-color: transparent;
  background: inherit;
  background-color: rgba(192,57,67,.10);
 }
 .has-error .form-control {
- border-color: #f92672;
+ border-color: #de143d;
  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
  box-shadow: inset 0 1px 1px rgba(0,0,0,0.025);
 }
 .kse-input-group-pretty > kbd {
  font-family: "Droid Sans Mono", monospace;
- color: #f8f8f0;
+ color: #303030;
  font-weight: normal;
  background: transparent;
 }
 .kse-input-group-pretty > kbd {
  font-family: "Droid Sans Mono", monospace;
- color: #f8f8f0;
+ color: #303030;
  font-weight: normal;
  background: transparent;
 }
@@ -13197,9 +13203,9 @@ div.nbext-enable-btns .btn[disabled],
 div.nbext-enable-btns .btn[disabled]:hover,
 .btn-default.disabled,
 .btn-default[disabled] {
- background: #252525;
- background-color: #252525;
- color: #f3f3e6;
+ background: #e8e8e8;
+ background-color: #e8e8e8;
+ color: #282828;
 }
 label#Keyword-Filter {
  display: none;
@@ -13208,37 +13214,37 @@ label#Keyword-Filter {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
  color: #ffffff;
- background-color: #66d9ef;
+ background-color: #126dce;
 }
 .input-group .nbext-list-btn-add,
 .input-group-btn:last-child > .btn-group > .btn {
- background: #282828;
- background-color: #282828;
- border-color: #282828;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border-color: #eeeeee;
 }
 .input-group .nbext-list-btn-add:hover,
 .input-group-btn:last-child > .btn-group > .btn:hover {
- background: #212121;
- background-color: #212121;
- border-color: #212121;
+ background: #e9e9e9;
+ background-color: #e9e9e9;
+ border-color: #e9e9e9;
 }
 #notebook-container > div.cell.code_cell.rendered.selected > div.widget-area > div.widget-subarea > div > div.widget_item.btn-group > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn {
- background: #282828;
- background-color: #282828;
- border-color: #282828;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ border-color: #eeeeee;
 }
 #notebook-container > div.cell.code_cell.rendered.selected > div.widget-area > div.widget-subarea > div > div.widget_item.btn-group > button.btn.btn-default.dropdown-toggle.widget-combo-carrot-btn:hover {
- background: #212121;
- background-color: #212121;
- border-color: #212121;
+ background: #e9e9e9;
+ background-color: #e9e9e9;
+ border-color: #e9e9e9;
 }
 input.raw_input {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt !important;
- color: #f8f8f0;
- background-color: #282828;
- border-color: #252525;
- background: #252525;
+ color: #303030;
+ background-color: #efefef;
+ border-color: #ececec;
+ background: #ececec;
  width: auto;
  vertical-align: baseline;
  padding: 0em 0.25em;
@@ -13258,18 +13264,18 @@ video {
  margin: 0px;
 }
 .cmd-palette form {
- background: #293547;
- background-color: #293547;
+ background: #eeeeee;
+ background-color: #eeeeee;
 }
 .typeahead-field input:last-child,
 .typeahead-hint {
- background: #293547;
- background-color: #293547;
+ background: #eeeeee;
+ background-color: #eeeeee;
  z-index: 1;
 }
 .typeahead-field input {
  font-family: "Exo_2", sans-serif;
- color: #f8f8f0;
+ color: #303030;
  border: none;
  font-size: 28pt;
  display: inline-block;
@@ -13278,17 +13284,17 @@ video {
  height: 70px;
 }
 .typeahead-select {
- background-color: #293547;
+ background-color: #eeeeee;
 }
 body > div.modal.cmd-palette.typeahead-field {
  display: table;
  border-collapse: separate;
- background-color: #2b3850;
+ background-color: #fafafa;
 }
 .typeahead-container button {
  font-family: "Exo_2", sans-serif;
  font-size: 28pt;
- background-color: #49483e;
+ background-color: #d0d0d0;
  border: none;
  display: inline-block;
  line-height: inherit;
@@ -13304,9 +13310,9 @@ body > div.modal.cmd-palette.typeahead-field {
 }
 .typeahead-container button:focus,
 .typeahead-container button:hover {
- color: #f8f8f0;
- background-color: #ae81ff;
- border-color: #ae81ff;
+ color: #2f2f2f;
+ background-color: #ff7823;
+ border-color: #ff7823;
 }
 .typeahead-list > li.typeahead-group.active > a,
 .typeahead-list > li.typeahead-group > a,
@@ -13316,15 +13322,15 @@ body > div.modal.cmd-palette.typeahead-field {
 }
 .typeahead-dropdown > li > a,
 .typeahead-list > li > a {
- color: #f8f8f0;
+ color: #303030;
  text-decoration: none;
 }
 .typeahead-dropdown,
 .typeahead-list {
  font-family: "Exo_2", sans-serif;
  font-size: 13pt;
- color: #f8f8f0;
- background-color: #202937;
+ color: #303030;
+ background-color: #ffffff;
  border: none;
  background-clip: padding-box;
  margin-top: 0px;
@@ -13337,19 +13343,19 @@ body > div.modal.cmd-palette.typeahead-field {
 .typeahead-list > li.active > a,
 .typeahead-list > li > a:focus,
 .typeahead-list > li > a:hover {
- color: #f8f8f0;
- background-color: #2b3850;
- border-color: #2b3850;
+ color: #2f2f2f;
+ background-color: #fafafa;
+ border-color: #fafafa;
 }
 .command-shortcut:before {
  content: "(command)";
  padding-right: 3px;
- color: #75715e;
+ color: #aaaaaa;
 }
 .edit-shortcut:before {
  content: "(edit)";
  padding-right: 3px;
- color: #75715e;
+ color: #aaaaaa;
 }
 ul.typeahead-list i {
  margin-left: 1px;
@@ -13367,7 +13373,7 @@ ul.typeahead-list {
 div.input.typeahead-hint,
 input.typeahead-hint,
 body > div.modal.cmd-palette.in > div > div > div > form > div > div.typeahead-field > span.typeahead-query > input.typeahead-hint {
- color: #75715e !important;
+ color: #aaaaaa !important;
  background-color: transparent;
  padding: 3px 10px;
 }
@@ -13378,8 +13384,8 @@ body > div.modal.cmd-palette.in > div > div > div > form > div > div.typeahead-f
  clear: both;
  font-weight: 400;
  line-height: 1.7;
- border: 1px solid #202937;
- border-bottom-color: rgba(73,72,62,.45);
+ border: 1px solid #ffffff;
+ border-bottom-color: rgba(180,180,180,.30);
 }
 body > div.modal.cmd-palette.in > div {
  min-width: 750px;
@@ -13387,25 +13393,25 @@ body > div.modal.cmd-palette.in > div {
 }
 .typeahead-container strong {
  font-weight: bolder;
- color: #ae81ff;
+ color: #ff7823;
 }
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
  color: #ffffff;
- background-color: #49483e;
- border-color: #49483e;
+ background-color: #ff7823;
+ border-color: #ff7823;
  border-style: solid;
  border-width: 1px;
  border-radius: 0px;
 }
 #find-and-replace #replace-preview .replace .match {
- background-color: #f92672;
- border-color: #f92672;
+ background-color: #de143d;
+ border-color: #de143d;
  border-radius: 0px;
 }
 #find-and-replace #replace-preview .replace .insert {
- background-color: #a6e22e;
- border-color: #a6e22e;
+ background-color: #009e07;
+ border-color: #009e07;
  border-radius: 0px;
 }
 div.CodeMirror,
@@ -13413,7 +13419,7 @@ div.CodeMirror pre {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt;
  line-height: 170%;
- color: #f8f8f0;
+ color: #303030;
 }
 div.CodeMirror-lines {
  padding-bottom: .6em;
@@ -13422,45 +13428,45 @@ div.CodeMirror-lines {
  padding-top: 4px;
 }
 span.ansiblack {
- color: #282828;
+ color: #dc4384;
 }
 span.ansiblue {
- color: #66d9ef;
+ color: #009e07;
 }
 span.ansigray {
- color: #888888;
+ color: #ff7823;
 }
 span.ansigreen {
- color: #a6e22e;
+ color: #333333;
 }
 span.ansipurple {
- color: #ae81ff;
+ color: #653bc5;
 }
 span.ansicyan {
- color: #66d9ef;
+ color: #055be0;
 }
 span.ansiyellow {
- color: #e6db74;
+ color: #ff7823;
 }
 span.ansired {
- color: #f92672;
+ color: #de143d;
 }
 div.output-stderr {
- background-color: #f92672;
+ background-color: #ebb5b7;
 }
 div.output-stderr pre {
- color: #f8f8f2;
+ color: #000000;
 }
 div.js-error {
- color: #f92672;
+ color: #de143d;
 }
 .ipython_tooltip {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt;
  line-height: 170%;
- border: 2px solid #141414;
- background: #282828;
- background-color: #282828;
+ border: 2px solid #dadada;
+ background: #eeeeee;
+ background-color: #eeeeee;
  border-radius: 2px;
  overflow-x: visible;
  overflow-y: visible;
@@ -13472,9 +13478,9 @@ div.js-error {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt;
  line-height: 170%;
- background: #282828;
- background-color: #282828;
- color: #f8f8f0;
+ background: #eeeeee;
+ background-color: #eeeeee;
+ color: #303030;
  overflow-x: visible;
  overflow-y: visible;
  max-width: 900px;
@@ -13493,147 +13499,147 @@ div.tooltiptext.bigtooltip {
 .cm-s-ipython.CodeMirror {
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt;
- background: #282828;
- color: #f8f8f0;
+ background: #efefef;
+ color: #303030;
  border-radius: 2px;
  font-style: normal;
  font-weight: normal;
 }
 .cm-s-ipython div.CodeMirror-selected {
- background: #49483e;
+ background: #e0e1e3;
 }
 .cm-s-ipython .CodeMirror-gutters {
- background: #49483e;
+ background: #e0e1e3;
  border: none;
  border-radius: 0px;
 }
 .cm-s-ipython .CodeMirror-linenumber {
- color: #75715e;
+ color: #aaaaaa;
 }
 .cm-s-ipython .CodeMirror-cursor {
- border-left: 2px solid #0095ff !important;
+ border-left: 2px solid #ff711a !important;
 }
 .cm-s-ipython span.cm-comment {
- color: #49483e;
+ color: #8d8d8d;
  font-style: italic;
 }
 .cm-s-ipython span.cm-atom {
- color: #ae81ff;
+ color: #055be0;
 }
 .cm-s-ipython span.cm-number {
- color: #ae81ff;
+ color: #ff8132;
 }
 .cm-s-ipython span.cm-property {
- color: #f8f8f0;
+ color: #303030;
 }
 .cm-s-ipython span.cm-attribute {
- color: #f8f8f0;
+ color: #303030;
 }
 .cm-s-ipython span.cm-keyword {
- color: #f92672;
+ color: #713bc5;
  font-weight: normal;
 }
 .cm-s-ipython span.cm-string {
- color: #e6db74;
+ color: #009e07;
 }
 .cm-s-ipython span.cm-meta {
- color: #fd971f;
+ color: #aa22ff;
 }
 .cm-s-ipython span.cm-operator {
- color: #a6e22e;
+ color: #055be0;
 }
 .cm-s-ipython span.cm-builtin {
- color: #a6e22e;
+ color: #e22978;
 }
 .cm-s-ipython span.cm-variable {
- color: #f8f8f0;
+ color: #303030;
 }
 .cm-s-ipython span.cm-variable-2 {
- color: #a6e22e;
+ color: #de143d;
 }
 .cm-s-ipython span.cm-variable-3 {
- color: #fd971f;
+ color: #aa22ff;
 }
 .cm-s-ipython span.cm-def {
- color: #a6e22e;
+ color: #e22978;
  font-weight: normal;
 }
 .cm-s-ipython span.cm-error {
- background: rgba(249,38,114,.4);
+ background: rgba(191,97,106,.40);
 }
 .cm-s-ipython span.cm-tag {
- color: #ae81ff;
+ color: #e22978;
 }
 .cm-s-ipython span.cm-link {
- color: #a6e22e;
+ color: #ff7823;
 }
 .cm-s-ipython span.cm-storage {
- color: #ae81ff;
+ color: #055be0;
 }
 .cm-s-ipython span.cm-entity {
- color: #a6e22e;
+ color: #e22978;
 }
 .cm-s-ipython span.cm-quote {
- color: #e6db74;
+ color: #009e07;
 }
 div.CodeMirror span.CodeMirror-matchingbracket {
- color: #f8f8f2;
- background-color: #49483e;
+ color: #1c1c1c;
+ background-color: rgba(30,112,199,.30);
 }
 div.CodeMirror span.CodeMirror-nonmatchingbracket {
- color: #f8f8f2;
- background: rgba(249,38,114,.4) !important;
+ color: #1c1c1c;
+ background: rgba(191,97,106,.40) !important;
 }
 div.cell.text_cell .cm-s-default .cm-header {
- color: #a6e22e;
+ color: #126dce;
 }
 div.cell.text_cell .cm-s-default span.cm-variable-2 {
- color: #f8f8f0;
+ color: #353535;
 }
 div.cell.text_cell .cm-s-default span.cm-variable-3 {
- color: #fd971f;
+ color: #aa22ff;
 }
 .cm-s-default span.cm-comment {
- color: #49483e;
+ color: #8d8d8d;
 }
 .cm-s-default .cm-tag {
- color: #529b2f;
+ color: #009fb7;
 }
 .cm-s-default .cm-builtin {
- color: #a6e22e;
+ color: #e22978;
 }
 .cm-s-default .cm-string {
- color: #e6db74;
+ color: #009e07;
 }
 .cm-s-default .cm-keyword {
- color: #f92672;
+ color: #713bc5;
 }
 .cm-s-default .cm-number {
- color: #ae81ff;
+ color: #ff8132;
 }
 .cm-s-default .cm-error {
- color: #ae81ff;
+ color: #055be0;
 }
 .CodeMirror-cursor {
- border-left: 2px solid #0095ff !important;
+ border-left: 2px solid #ff711a !important;
  border-right: none;
  width: 0;
 }
 .cm-s-default div.CodeMirror-selected {
- background: #49483e;
+ background: #e0e1e3;
 }
 .cm-s-default .cm-selected {
- background: #49483e;
+ background: #e0e1e3;
 }
 .completions {
  position: absolute;
  z-index: 110;
  overflow: hidden;
- border: medium solid #49483e;
+ border: medium solid #ff7823;
  line-height: 1;
 }
 .completions select {
- background: #282828;
+ background: #efefef;
  outline: none;
  border: none;
  padding: 0px;
@@ -13641,11 +13647,11 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
  overflow: auto;
  font-family: "Droid Sans Mono", monospace;
  font-size: 11pt;
- color: #f8f8f0;
+ color: #303030;
  width: auto;
 }
 div#maintoolbar {
- display: none !important;
+ margin-left: 8px !important;
 }
 #header-container {
  display: none !important;
@@ -13760,12 +13766,12 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg={'threshold':3,     // depth of toc (number of levels)
+            var cfg={'threshold':4,     // depth of toc (number of levels)
              'number_sections': false,  // sections numbering
              'toc_cell': false,          // useless here
              'toc_window_display': true, // display the toc window
              "toc_section_display": "block", // display toc contents in the window
-             'sideBar':false,             // sidebar or floating window
+             'sideBar':true,             // sidebar or floating window
              'navigate_menu':false       // navigation menu (only in liveNotebook -- do not change)
             }
 
@@ -13788,6 +13794,671 @@ $( document ).ready(function(){
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#31532;&#65298;&#31456;-&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;">&#31532;&#65298;&#31456; &#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#31532;&#65298;&#31456;-&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;">&#182;</a></h1><h2 id="Abstract">Abstract<a class="anchor-link" href="#Abstract">&#182;</a></h2><p>本章では線形回帰モデルを通じてモデリングの基礎概念について述べる。</p>
+<ul>
+<li>モデリング：モデルの想定 → モデルのパラメータ推定 → モデルの評価と選択 のモデルの構築の一連のプロセスのこと</li>
+<li>回帰モデル：現象の結果とそれに影響を及ぼすと考えられる複数の要因とを結ぶつけるモデル</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2&#22793;&#25968;&#38291;&#12398;&#38306;&#20418;&#12434;&#25417;&#12360;&#12427;">2&#22793;&#25968;&#38291;&#12398;&#38306;&#20418;&#12434;&#25417;&#12360;&#12427;<a class="anchor-link" href="#2&#22793;&#25968;&#38291;&#12398;&#38306;&#20418;&#12434;&#25417;&#12360;&#12427;">&#182;</a></h2><h3 id="&#12487;&#12540;&#12479;&#12392;&#12514;&#12487;&#12523;">&#12487;&#12540;&#12479;&#12392;&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#12487;&#12540;&#12479;&#12392;&#12514;&#12487;&#12523;">&#182;</a></h3><h4 id="&#12487;&#12540;&#12479;&#65306;&#12496;&#12493;&#12395;&#21152;&#12360;&#12383;&#21147;&#12392;&#12496;&#12493;&#12398;&#38263;&#12373;">&#12487;&#12540;&#12479;&#65306;&#12496;&#12493;&#12395;&#21152;&#12360;&#12383;&#21147;&#12392;&#12496;&#12493;&#12398;&#38263;&#12373;<a class="anchor-link" href="#&#12487;&#12540;&#12479;&#65306;&#12496;&#12493;&#12395;&#21152;&#12360;&#12383;&#21147;&#12392;&#12496;&#12493;&#12398;&#38263;&#12373;">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;weight&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">5</span><span class="p">)],</span>
+        <span class="s2">&quot;length&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">5.4</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">,</span> <span class="mf">6.9</span><span class="p">,</span> <span class="mf">6.4</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">,</span> <span class="mf">7.7</span><span class="p">,</span> <span class="mf">8.4</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">,</span> <span class="mf">9.9</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">]</span>
+    <span class="p">})</span>
+<span class="n">data</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[84]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>length</th>
+      <th>weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5.7</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6.9</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6.4</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>8.2</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>7.7</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>8.4</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>10.1</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9.9</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10.5</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#12514;&#12487;&#12523;">&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#12514;&#12487;&#12523;">&#182;</a></h4><h5 id="&#32218;&#24418;&#12514;&#12487;&#12523;">&#32218;&#24418;&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#32218;&#24418;&#12514;&#12487;&#12523;">&#182;</a></h5>$$
+y = u(x) + \beta_0 + \beta_1 x
+$$<p>ここに誤差の影響を考慮すると。</p>
+<h5 id="&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;">&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;">&#182;</a></h5>$$
+y_i = u(x) + \beta_0 + \beta_1 x_i + \epsilon_i
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;">&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;<a class="anchor-link" href="#&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;">&#182;</a></h3><h4 id="&#26368;&#23567;&#20108;&#20055;&#27861;">&#26368;&#23567;&#20108;&#20055;&#27861;<a class="anchor-link" href="#&#26368;&#23567;&#20108;&#20055;&#27861;">&#182;</a></h4><p>各実験点での誤差の二条派を最初にするように回帰係数の値を決定する方法<br></p>
+<p>誤差の二乗和 $S(\beta_0, \beta_1) \equiv \sum_{i=1}^{n} \{y_i - (\beta_0 + \beta_1 x_i)\}^2$
+を最小にする回帰係数を求める。<br>
+実際、上の式を$\beta_0,\beta_1$に対して偏微分した式を0とおくことで最小二乗推定値$\hat\beta_0,\hat\beta_1$が求める。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SymPy は Python の代数計算ライブラリです.</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="n">init_session</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>IPython console for SymPy 1.0 (Python 3.5.2-64-bit) (ground types: python)
+
+These commands were executed:
+&gt;&gt;&gt; from __future__ import division
+&gt;&gt;&gt; from sympy import *
+&gt;&gt;&gt; x, y, z, t = symbols(&#39;x y z t&#39;)
+&gt;&gt;&gt; k, m, n = symbols(&#39;k m n&#39;, integer=True)
+&gt;&gt;&gt; f, g, h = symbols(&#39;f g h&#39;, cls=Function)
+&gt;&gt;&gt; init_printing()
+
+Documentation can be found at http://docs.sympy.org/1.0/
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b0</span><span class="p">,</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;b0 b1&quot;</span><span class="p">)</span>
+
+<span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">b1</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b0</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">j_b0</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">b0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">j_b1</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_b0</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">j_b0</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;weight&quot;</span><span class="p">]),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;length&quot;</span><span class="p">])])</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()])</span> <span class="o">/</span> <span class="mf">2.</span>
+<span class="n">sum_b1</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">j_b1</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;weight&quot;</span><span class="p">]),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;length&quot;</span><span class="p">])])</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()])</span> <span class="o">/</span> <span class="mf">2.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve</span><span class="p">([</span><span class="n">sum_b0</span><span class="p">,</span> <span class="n">sum_b1</span><span class="p">],</span> <span class="p">[</span><span class="n">b0</span><span class="p">,</span> <span class="n">b1</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[104]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\left \{ b_{0} : 4.69333333333333, \quad b_{1} : 0.117333333333333\right \}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Plotすると、</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span> <span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.693333333333</span> <span class="o">+</span> <span class="mf">0.1173333333333</span><span class="o">*</span><span class="n">expected</span> <span class="k">for</span> <span class="n">expected</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">])],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;予測値&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;weight&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;length&quot;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;測定値&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;線形回帰&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;length&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.15</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#26368;&#23588;&#27861;">&#26368;&#23588;&#27861;<a class="anchor-link" href="#&#26368;&#23588;&#27861;">&#182;</a></h4><p>各実験点で観測されるデータはある確率分布に従って得られるものであるという過程の基に観測されたデータが得られる確率を最大化するような回帰係数を推定する方法。<br>
+データを計測することでヒストグラムが得られる。現象の起こる確率の分布を示したヒストグラムを近似する数理的なモデルが確率分布モデルである。<br>
+代表的な確率分布は正規分布。<br>
+これを導入することで、実験点$x_i$での観測データ$y_i$は確率変数$Y_i$の実現値であり、平均$\mu_i$、分散$\sigma^2$の正規分布
+$$
+f(y_i|x_i;\mu_i,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}exp\{- \frac{(y_i - \mu_i)^2}{2\sigma^2}\}
+$$
+に従って観測されたと考える。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
     </div>
   </div>
 </body>
