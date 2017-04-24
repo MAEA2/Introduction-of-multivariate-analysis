@@ -14644,7 +14644,161 @@ $$l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^
 $$
 y = X\beta + \epsilon
 $$
-ここで、$y$はn次元観測値ベクトル、$X$はpこの説明変数に関するデータに片方に対応する1を付け加えた</p>
+ここで、$y$は$n$次元観測値ベクトル、$X$はpこの説明変数に関するデータに片方に対応する1を付け加えた$n \times (p+1)$次元回帰係数ベクトル、$\epsilon$は$n$次元誤差ベクトルである。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;">&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;<a class="anchor-link" href="#&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;">&#182;</a></h3><h4 id="&#26368;&#23567;&#20108;&#20055;&#27861;">&#26368;&#23567;&#20108;&#20055;&#27861;<a class="anchor-link" href="#&#26368;&#23567;&#20108;&#20055;&#27861;">&#182;</a></h4><p>多変量の場合、誤差の出方に以下の仮定を置くことでより強く推定の良さが保証される。
+$$
+E[\epsilon]\equiv (E[\epsilon_1],\cdots,E[\epsilon_n])^T = (0,\cdots,0)^T = \mathcal{0}^T
+$$
+$$
+E[\epsilon \epsilon^T] 
+\equiv\left(\begin{array}{cc} 
+E[\epsilon_1^2] & E[\epsilon_1 \epsilon_2] & \cdots & E[\epsilon_1 \epsilon_n]\\
+E[\epsilon_2 \epsilon_1] & E[\epsilon_2^2] & \cdots & E[\epsilon_2 \epsilon_n]\\
+\vdots & \vdots & \ddots & \vdots\\
+E[\epsilon_n \epsilon_1] & E[\epsilon_n \epsilon_2] & \cdots & E[\epsilon_n^2]\\
+\end{array}\right) 
+= \sigma^2 I_n
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>最小二乗推定値は各実験点での誤差の二乗和を最小にする値である。その値は、以下の正規方程式を解くことで与えられる。
+$$
+\frac{\partial S(\beta)}{\partial \beta} 
+= \frac{\partial}{\partial \beta}(y^T y - 2 y^T X \beta + \beta^T X^T X \beta)
+= -2 X^T y + 2X^T X \beta
+= 0
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$X^T X$が逆行列が存在する時、最小二乗推定値は$\hat\beta = (X^T X)^{-1}X^T y$で与えられる。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>この最小二乗推定値を係数荷物式が線形回帰式である。
+$$y = \hat\beta^T x$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>各実験点$x_i$での線形回帰式上の値として定義されるのが予測値$\hat y_i$であり、観測値$y_i$と予測値との差が残差$e_i$で、それぞれ次の式で与えられる。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$\begin{align}\hat y_i =& \hat \beta^T x_i\\ e_i =& y_i - \hat y_i, \: i=1,2,\cdots,n \end{align}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>これをベクトル表現で表すと、
+$$
+\begin{align}
+\hat y =& X \hat \beta = X(X^T X)^{-1} X^T y\\
+e =& y - \hat y = [I_n - X(X^T X)^{-1} X^T]y
+\end{align}
+$$となり、残差平方和は
+$$
+e^T e = (y- \hat y)^T (y- \hat y) = y^T [I_n - X(X^T X)^{-1} X^T]y
+$$で与えられる。<br>
+ここで$P=I_n - X(X^T X)^{-1} X^T$に対して$P^2 = P$が成り立つことを用いた。このような行列を冪等行列という。詳しい計算は以下を参照。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./1.png" width="960"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="&#26368;&#23567;&#20108;&#20055;&#25512;&#23450;&#37327;&#12398;&#24615;&#36074;">&#26368;&#23567;&#20108;&#20055;&#25512;&#23450;&#37327;&#12398;&#24615;&#36074;<a class="anchor-link" href="#&#26368;&#23567;&#20108;&#20055;&#25512;&#23450;&#37327;&#12398;&#24615;&#36074;">&#182;</a></h5><p>最小二乗推定量$\hat\beta$の期待値と分散共分散行列は以下のようである。
+$$
+\begin{align}
+E[\hat\beta] =& (X^T X)^{-1}X^T E[y]\\ =& \beta\\
+E[(\hat\beta - \beta)(\hat\beta - \beta)^T] =& (X^T X)^{-1}X^T E[(y - X\beta)(y - X\beta)^T] X(X^T X)^{-1}\\ =& \sigma^2 (X^T X)^{-1}
+\end{align}
+$$
+つまり、最小二乗推定量$\hat\beta$は$\beta$の不偏推定量である。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>また、最小二乗推定量$\hat\beta = (X^T X)^{-1}X^T y$は最良線形不偏推定量(Best Linear Unbiased Estimator: BLUE)である。(ガウス・マルコフの定理)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>上と同じ記号を用いると、最小二乗推定量は
+$${\hat {\beta }}=(x^{T}x)^{-1}x^{T}y$$
+である。これは、
+$${\hat {\beta }}=(x^{T}x)^{-1}x^{T}y=(x^{T}x)^{-1}x^{T}(x\beta +\epsilon)=\beta +(x^{T}x)^{-1}x^{T}\epsilon $$
+という変形が可能なことに注意する。 両辺の平均を取ると、 誤差の不偏性の仮定より最右辺第二項が消えて、 $ {\hat {\beta }}$  の不偏性が示される。また右辺の $\beta$ を左辺に移項して、平均を取ることで、
+$$ E(({\hat {\beta }}-\beta )^{2})=\sigma ^{2}(x^{T}x)^{-1}$$
+である。ここで別な $\beta$ の推定値 $ b=((x^{T}x)^{-1}x^{T}+D)y$  を考える。$D$ は $x$ とは無相関 $E(DX) = 0$ であることに注意すると、
+$$ E((b-\beta )^{2})=\sigma ^{2}(x^{T}x)^{-1}+\sigma ^{2}D^{T}D$$
+となる。第二項は負でないから $$ {\hat {\beta }}$$  が最小分散を持つことが示された。</p>
 
 </div>
 </div>
@@ -14654,7 +14808,7 @@ $$
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
 </div>
