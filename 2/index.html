@@ -14753,7 +14753,7 @@ $$で与えられる。<br>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./1.png" width="960"></p>
+<p><img src="./1.jpg" width="960"></p>
 
 </div>
 </div>
@@ -14780,7 +14780,8 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>また、最小二乗推定量$\hat\beta = (X^T X)^{-1}X^T y$は最良線形不偏推定量(Best Linear Unbiased Estimator: BLUE)である。(ガウス・マルコフの定理)</p>
+<p>また、最小二乗推定量$\hat\beta = (X^T X)^{-1}X^T y$は最良線形不偏推定量(Best Linear Unbiased Estimator: BLUE)である。<br>
+→ガウス・マルコフの定理。以下その証明。</p>
 
 </div>
 </div>
@@ -14790,31 +14791,21 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>上と同じ記号を用いると、最小二乗推定量は
-$${\hat {\beta }}=(x^{T}x)^{-1}x^{T}y$$
+<p><hr>
+上と同じ記号を用いると、最小二乗推定量は
+${\hat {\beta }}=(X^{T}X)^{-1}X^{T}y$
 である。これは、
-$${\hat {\beta }}=(x^{T}x)^{-1}x^{T}y=(x^{T}x)^{-1}x^{T}(x\beta +\epsilon)=\beta +(x^{T}x)^{-1}x^{T}\epsilon $$
+$${\hat {\beta }}=(X^{T}X)^{-1}X^{T}y=(X^{T}X)^{-1}X^{T}(X\beta +\epsilon)=\beta +(X^{T}X)^{-1}X^{T}\epsilon $$
 という変形が可能なことに注意する。 両辺の平均を取ると、 誤差の不偏性の仮定より最右辺第二項が消えて、 $ {\hat {\beta }}$  の不偏性が示される。また右辺の $\beta$ を左辺に移項して、平均を取ることで、
-$$ E(({\hat {\beta }}-\beta )^{2})=\sigma ^{2}(x^{T}x)^{-1}$$
-である。ここで別な $\beta$ の推定値 $ b=((x^{T}x)^{-1}x^{T}+D)y$  を考える。$D$ は $x$ とは無相関 $E(DX) = 0$ であることに注意すると、
-$$ E((b-\beta )^{2})=\sigma ^{2}(x^{T}x)^{-1}+\sigma ^{2}D^{T}D$$
-となる。第二項は負でないから $$ {\hat {\beta }}$$  が最小分散を持つことが示された。</p>
-
+$$ E(({\hat {\beta }}-\beta )^{2})=\sigma ^{2}(X^{T}X)^{-1}$$
+である。<br>
+ここで別な $\beta$ の推定値 $ b=((X^{T}X)^{-1}X^{T}+D)y$  を考える。$D$ は $X$ とは無相関 $E(DX) = 0$ であることに注意すると、
+$$ E((b-\beta )^{2})=\sigma ^{2}(X^{T}X)^{-1}+\sigma ^{2}D^{T}D$$
+となる。第二項は負でないから $ {\hat {\beta }}$  が最小分散を持つことが示された。<br>
+(<a href="https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%EF%BC%9D%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86">https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%EF%BC%9D%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86</a>)</p>
+<hr>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
