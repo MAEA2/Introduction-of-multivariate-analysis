@@ -13819,7 +13819,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13838,7 +13838,7 @@ $( document ).ready(function(){
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[84]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13918,10 +13918,14 @@ $( document ).ready(function(){
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="&#12514;&#12487;&#12523;">&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#12514;&#12487;&#12523;">&#182;</a></h4><h5 id="&#32218;&#24418;&#12514;&#12487;&#12523;">&#32218;&#24418;&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#32218;&#24418;&#12514;&#12487;&#12523;">&#182;</a></h5>$$
+\begin{equation}
 y = u(x) + \beta_0 + \beta_1 x
+\end{equation}
 $$<p>ここに誤差の影響を考慮すると。</p>
 <h5 id="&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;">&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;<a class="anchor-link" href="#&#32218;&#24418;&#22238;&#24112;&#12514;&#12487;&#12523;">&#182;</a></h5>$$
+\begin{equation}
 y_i = u(x) + \beta_0 + \beta_1 x_i + \epsilon_i
+\end{equation}
 $$
 </div>
 </div>
@@ -13941,7 +13945,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SymPy は Python の代数計算ライブラリです.</span>
@@ -13980,7 +13984,7 @@ Documentation can be found at http://docs.sympy.org/1.0/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">b0</span><span class="p">,</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;b0 b1&quot;</span><span class="p">)</span>
@@ -13995,7 +13999,7 @@ Documentation can be found at http://docs.sympy.org/1.0/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">j_b0</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">b0</span><span class="p">)</span>
@@ -14008,7 +14012,7 @@ Documentation can be found at http://docs.sympy.org/1.0/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">j_b1</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">b1</span><span class="p">)</span>
@@ -14021,7 +14025,7 @@ Documentation can be found at http://docs.sympy.org/1.0/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_b0</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">j_b0</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;weight&quot;</span><span class="p">]),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;length&quot;</span><span class="p">])])</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()])</span> <span class="o">/</span> <span class="mf">2.</span>
@@ -14035,7 +14039,7 @@ Documentation can be found at http://docs.sympy.org/1.0/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">solve</span><span class="p">([</span><span class="n">sum_b0</span><span class="p">,</span> <span class="n">sum_b1</span><span class="p">],</span> <span class="p">[</span><span class="n">b0</span><span class="p">,</span> <span class="n">b1</span><span class="p">])</span>
@@ -14050,7 +14054,7 @@ Documentation can be found at http://docs.sympy.org/1.0/
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[188]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 
 <div class="output_latex output_subarea output_execute_result">
@@ -14075,7 +14079,7 @@ $$\left \{ b_{0} : 4.69333333333333, \quad b_{1} : 0.117333333333333\right \}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span> <span class="n">matplotlib</span> <span class="n">inline</span>
@@ -14440,7 +14444,9 @@ kiRJUgeLJEmSpA4WSZIkSR3+A9o11DBzgwcsAAAAAElFTkSuQmCC
 代表的な確率分布は正規分布。<br>
 これを導入することで、実験点$x_i$での観測データ$y_i$は確率変数$Y_i$の実現値であり、平均$\mu_i$、分散$\sigma^2$の正規分布
 $$
+\begin{equation}
 f(y_i|x_i;\mu_i,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\{- \frac{(y_i - \mu_i)^2}{2\sigma^2}\}
+\end{equation}
 $$
 に従って観測されたと考える。<br>
 ただし、$E[Y_i|x_i] = \mu_i$</p>
@@ -14455,7 +14461,9 @@ $$
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>線形回帰モデルとは、各点での真の値が直線状に並ぶと仮定しとたモデルであり、$\mu_i = \beta_0 + \beta_1 x_i$が成り立つ。これを代入することで、
 $$
+\begin{equation}
 f(y_i|x_i;\beta_0,\beta_1,\sigma^2) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\{- \frac{\{y_i - (\beta_0 + \beta_1 x_i)\}^2}{2\sigma^2}\}
+\end{equation}
 $$となる。</p>
 
 </div>
@@ -14478,7 +14486,11 @@ $$となる。</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>n個の観測データがお互いに独立であると仮定すると、n個のデータに関する尤度はそれぞれの尤度の積で与えられる。<br>
 尤度関数は以下の形となる。
-$$L(\beta_0, \beta_1, \sigma^2)\equiv \Pi_{i=i}^{n} f(y_i|x_i;\beta_0,\beta_1,\sigma^2)$$</p>
+$$
+\begin{equation}
+L(\beta_0, \beta_1, \sigma^2)\equiv \Pi_{i=i}^{n} f(y_i|x_i;\beta_0,\beta_1,\sigma^2)
+\end{equation}
+$$</p>
 
 </div>
 </div>
@@ -14498,7 +14510,11 @@ $$L(\beta_0, \beta_1, \sigma^2)\equiv \Pi_{i=i}^{n} f(y_i|x_i;\beta_0,\beta_1,\s
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-$$l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^{n} f(y_i|x_i;\beta_0,\beta_1,\sigma^2)$$
+$$
+\begin{equation}
+l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^{n} f(y_i|x_i;\beta_0,\beta_1,\sigma^2)
+\end{equation}
+$$
 </div>
 </div>
 </div>
@@ -14523,7 +14539,7 @@ $$l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[217]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14547,7 +14563,7 @@ $$l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
@@ -14568,7 +14584,7 @@ $$l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[216]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -14586,43 +14602,43 @@ $$l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^
   <tbody>
     <tr>
       <th>0</th>
-      <td>6.489631</td>
-      <td>2.275273</td>
-      <td>34.214349</td>
-      <td>28.557257</td>
-      <td>0.095593</td>
+      <td>6.545644</td>
+      <td>2.484118</td>
+      <td>34.098035</td>
+      <td>28.534602</td>
+      <td>0.146011</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>6.646057</td>
-      <td>2.529821</td>
-      <td>34.387778</td>
-      <td>29.076267</td>
-      <td>0.048429</td>
+      <td>6.396828</td>
+      <td>2.449078</td>
+      <td>34.240133</td>
+      <td>29.078239</td>
+      <td>0.261214</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>6.301737</td>
-      <td>2.217674</td>
-      <td>34.573531</td>
-      <td>29.589207</td>
-      <td>0.099807</td>
+      <td>6.516197</td>
+      <td>2.397709</td>
+      <td>34.526374</td>
+      <td>29.369450</td>
+      <td>0.151993</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6.286062</td>
-      <td>2.423196</td>
-      <td>34.710146</td>
-      <td>30.103095</td>
-      <td>0.069227</td>
+      <td>6.504767</td>
+      <td>2.367152</td>
+      <td>34.652101</td>
+      <td>30.055498</td>
+      <td>0.182554</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>6.532465</td>
-      <td>2.447980</td>
-      <td>35.005273</td>
-      <td>30.271071</td>
-      <td>0.188184</td>
+      <td>6.376649</td>
+      <td>2.415569</td>
+      <td>34.944187</td>
+      <td>30.506467</td>
+      <td>0.215013</td>
     </tr>
   </tbody>
 </table>
@@ -14642,7 +14658,9 @@ $$l(\beta_0, \beta_1, \sigma^2) \equiv L(\beta_0, \beta_1, \sigma^2)= \Pi_{i=i}^
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>線形重回帰モデルを用いてこの観測データから物質の量$y$と複数の要因を結びつけるモデルを構築すること。行列表現で表すと以下のようになる。
 $$
+\begin{equation}
 y = X\beta + \epsilon
+\end{equation}
 $$
 ここで、$y$は$n$次元観測値ベクトル、$X$はpこの説明変数に関するデータに片方に対応する1を付け加えた$n \times (p+1)$次元回帰係数ベクトル、$\epsilon$は$n$次元誤差ベクトルである。</p>
 
@@ -14656,9 +14674,12 @@ $$
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;">&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;<a class="anchor-link" href="#&#12514;&#12487;&#12523;&#12398;&#25512;&#23450;">&#182;</a></h3><h4 id="&#26368;&#23567;&#20108;&#20055;&#27861;">&#26368;&#23567;&#20108;&#20055;&#27861;<a class="anchor-link" href="#&#26368;&#23567;&#20108;&#20055;&#27861;">&#182;</a></h4><p>多変量の場合、誤差の出方に以下の仮定を置くことでより強く推定の良さが保証される。
 $$
+\begin{equation}
 E[\epsilon]\equiv (E[\epsilon_1],\cdots,E[\epsilon_n])^T = (0,\cdots,0)^T = \mathcal{0}^T
+\end{equation}
 $$
 $$
+\begin{equation}
 E[\epsilon \epsilon^T] 
 \equiv\left(\begin{array}{cc} 
 E[\epsilon_1^2] & E[\epsilon_1 \epsilon_2] & \cdots & E[\epsilon_1 \epsilon_n]\\
@@ -14667,6 +14688,7 @@ E[\epsilon_2 \epsilon_1] & E[\epsilon_2^2] & \cdots & E[\epsilon_2 \epsilon_n]\\
 E[\epsilon_n \epsilon_1] & E[\epsilon_n \epsilon_2] & \cdots & E[\epsilon_n^2]\\
 \end{array}\right) 
 = \sigma^2 I_n
+\end{equation}
 $$</p>
 
 </div>
@@ -14679,10 +14701,12 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>最小二乗推定値は各実験点での誤差の二乗和を最小にする値である。その値は、以下の正規方程式を解くことで与えられる。
 $$
+\begin{equation}
 \frac{\partial S(\beta)}{\partial \beta} 
 = \frac{\partial}{\partial \beta}(y^T y - 2 y^T X \beta + \beta^T X^T X \beta)
 = -2 X^T y + 2X^T X \beta
 = 0
+\end{equation}
 $$</p>
 
 </div>
@@ -14704,7 +14728,11 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>この最小二乗推定値を係数荷物式が線形回帰式である。
-$$y = \hat\beta^T x$$</p>
+$$
+\begin{equation}
+y = \hat\beta^T x
+\end{equation}
+$$</p>
 
 </div>
 </div>
@@ -14741,7 +14769,9 @@ e =& y - \hat y = [I_n - X(X^T X)^{-1} X^T]y
 \end{align}
 $$となり、残差平方和は
 $$
+\begin{equation}
 e^T e = (y- \hat y)^T (y- \hat y) = y^T [I_n - X(X^T X)^{-1} X^T]y
+\end{equation}
 $$で与えられる。<br>
 ここで$P=I_n - X(X^T X)^{-1} X^T$に対して$P^2 = P$が成り立つことを用いた。このような行列を冪等行列という。詳しい計算は以下を参照。</p>
 
@@ -14780,8 +14810,7 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>また、最小二乗推定量$\hat\beta = (X^T X)^{-1}X^T y$は最良線形不偏推定量(Best Linear Unbiased Estimator: BLUE)である。<br>
-→ガウス・マルコフの定理。以下その証明。</p>
+<p>また、最小二乗推定量$\hat\beta = (X^T X)^{-1}X^T y$は最良線形不偏推定量(Best Linear Unbiased Estimator: BLUE)である。(ガウス・マルコフの定理)<br></p>
 
 </div>
 </div>
@@ -14791,21 +14820,144 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><hr>
-上と同じ記号を用いると、最小二乗推定量は
-${\hat {\beta }}=(X^{T}X)^{-1}X^{T}y$
-である。これは、
-$${\hat {\beta }}=(X^{T}X)^{-1}X^{T}y=(X^{T}X)^{-1}X^{T}(X\beta +\epsilon)=\beta +(X^{T}X)^{-1}X^{T}\epsilon $$
-という変形が可能なことに注意する。 両辺の平均を取ると、 誤差の不偏性の仮定より最右辺第二項が消えて、 $ {\hat {\beta }}$  の不偏性が示される。また右辺の $\beta$ を左辺に移項して、平均を取ることで、
-$$ E(({\hat {\beta }}-\beta )^{2})=\sigma ^{2}(X^{T}X)^{-1}$$
+<p><hr></p>
+<h5 id="&#12460;&#12454;&#12473;&#12539;&#12510;&#12523;&#12467;&#12501;&#12398;&#23450;&#29702;&#12398;&#35388;&#26126;">&#12460;&#12454;&#12473;&#12539;&#12510;&#12523;&#12467;&#12501;&#12398;&#23450;&#29702;&#12398;&#35388;&#26126;<a class="anchor-link" href="#&#12460;&#12454;&#12473;&#12539;&#12510;&#12523;&#12467;&#12501;&#12398;&#23450;&#29702;&#12398;&#35388;&#26126;">&#182;</a></h5><p>上と同じ記号を用いると、最小二乗推定量は
+$\hat\beta =(X^{T}X)^{-1}X^{T}y$
+である。<br>
+これは、
+$$
+\begin{equation}
+\hat \beta =(X^{T}X)^{-1}X^{T}y=(X^{T}X)^{-1}X^{T}(X\beta +\epsilon)=\beta +(X^{T}X)^{-1}X^{T}\epsilon 
+\end{equation}
+$$
+という変形が可能なことに注意する。 <br>
+両辺の平均を取ると、 誤差の不偏性の仮定より最右辺第二項が消えて、 $ {\hat {\beta }}$  の不偏性が示される。また右辺の $\beta$ を左辺に移項して、平均を取ることで、
+$$
+\begin{equation}
+E((\hat \beta -\beta )^{2})=\sigma ^{2}(X^{T}X)^{-1}
+\end{equation}
+$$
 である。<br>
 ここで別な $\beta$ の推定値 $ b=((X^{T}X)^{-1}X^{T}+D)y$  を考える。$D$ は $X$ とは無相関 $E(DX) = 0$ であることに注意すると、
-$$ E((b-\beta )^{2})=\sigma ^{2}(X^{T}X)^{-1}+\sigma ^{2}D^{T}D$$
+$$
+\begin{equation}
+E((b-\beta )^{2})=\sigma ^{2}(X^{T}X)^{-1}+\sigma ^{2}D^{T}D
+\end{equation}
+$$
 となる。第二項は負でないから $ {\hat {\beta }}$  が最小分散を持つことが示された。<br>
-(<a href="https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%EF%BC%9D%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86">https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%EF%BC%9D%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86</a>)</p>
+<a link="https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%EF%BC%9D%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E3%81%AE%E5%AE%9A%E7%90%86">Source(wikipedia)</a></p>
 <hr>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&#26368;&#23588;&#27861;">&#26368;&#23588;&#27861;<a class="anchor-link" href="#&#26368;&#23588;&#27861;">&#182;</a></h4><p>目的変数に関するデータは正規分布に従って観測されたと過程し、尤度関数を最大化するようなモデルを観測データに最も良くて起動するモデルとみなす。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>このため、誤差ベクトルに対する式(8)と式(9)の条件に加えて、$\epsilon$の各成分はお互い独立で正規分布$N(0,\sigma^2)$に従うという過程を置く。このように誤差の出方に正規分布を仮定した線形回帰モデルをガウス型線形回帰モデルという。
+$$
+\begin{equation}
+y = X\beta + \epsilon, \: \epsilon\sim N_n(0, \sigma^2 I_n)
+\end{equation}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ここで以下の確率ベクトルの分布の性質により、
+$$
+\begin{equation}
+Y \sim N_n(\mu,\Sigma) \Rightarrow Z = c+AY \sim N_m(c+A\mu, A\Sigma A^T),\: (ここで、c:m次元、A:m\times n 定数行列)
+\end{equation}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>観測値ベクトル$y$は$N_n(X\beta, \sigma^2 I_n)$に従う。<br>
+よって、データ$y,X$が与えられた元でパラメータ$\beta, \sigma^2$の関数と見た尤度関数は、
+$$
+\begin{equation}
+L(\beta,\sigma^2) \equiv f(y|X;\beta,\sigma^2) = N_n(X\beta, \sigma^2 I_n)
+\end{equation}
+$$
+であり、対数尤度関数は、
+$$
+\begin{equation}
+l(\beta,\sigma^2) \equiv log L(\beta,\sigma^2)
+\end{equation}
+$$
+となる。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>対数尤度関数をそれぞれ$\beta,\sigma^2$に偏微分することで尤度方程式を得る。その解を求めることで最尤推定値を得る。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\beta,\sigma^2$の最尤推定値を計算すると、
+$$
+\begin{align}
+\hat\beta =& (X^T X)^{-1} X^T y\\
+\hat\sigma^2 =& \frac{1}{n}(y - X\hat\beta)^T (y - X\hat\beta)
+\end{align}
+$$
+を得る。また、予測値ベクトル、残差ベクトル、誤差分散の推定値は以下のようになる。
+$$
+\begin{align}
+\hat y =& (X^T X)^{-1} X^T y\\
+\hat\sigma^2 =& \frac{1}{n}(y - X\hat\beta)^T (y - X\hat\beta) = \frac{1}{n}(y - \hat y)^T (y - \hat y)
+\end{align}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
