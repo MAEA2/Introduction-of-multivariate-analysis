@@ -14986,7 +14986,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">34.1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">52.6</span> <span class="o">-</span> <span class="mf">34.1</span><span class="p">)</span><span class="o">/</span><span class="mi">85</span><span class="o">*</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
@@ -15011,7 +15011,7 @@ $$</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[60]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[111]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -15056,156 +15056,24 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>      
-        <span class="s2">&quot;温度&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">],</span>
-        <span class="s2">&quot;圧力&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">press</span><span class="p">],</span>
-        <span class="s2">&quot;触媒量&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">catal</span><span class="p">],</span>
-        <span class="s2">&quot;pH&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ph</span><span class="p">]</span>
-<span class="p">})</span>
-<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">set_X_with_noise_pH</span><span class="p">(</span><span class="n">level</span><span class="p">):</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>      
+            <span class="s2">&quot;温度&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">temp</span><span class="p">],</span>
+            <span class="s2">&quot;圧力&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">press</span><span class="p">],</span>
+            <span class="s2">&quot;触媒量&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">catal</span><span class="p">],</span>
+            <span class="s2">&quot;pH&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">level</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ph</span><span class="p">]</span>
+    <span class="p">})</span>
+    <span class="n">X_without_pH</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;pH&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">X_without_pH</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">X_without_pH</span> <span class="o">=</span> <span class="n">set_X_with_noise_pH</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[61]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pH</th>
-      <th>圧力</th>
-      <th>温度</th>
-      <th>触媒量</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>7.993274</td>
-      <td>2.305560</td>
-      <td>34.117641</td>
-      <td>0.084671</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>6.985193</td>
-      <td>2.338337</td>
-      <td>34.321649</td>
-      <td>0.094645</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>6.318454</td>
-      <td>2.354600</td>
-      <td>34.545081</td>
-      <td>0.123991</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>6.701042</td>
-      <td>2.389282</td>
-      <td>34.775350</td>
-      <td>0.125710</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5.255027</td>
-      <td>2.419928</td>
-      <td>34.989264</td>
-      <td>0.146251</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_without_pH</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;pH&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">X_without_pH</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[66]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>圧力</th>
-      <th>温度</th>
-      <th>触媒量</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2.305560</td>
-      <td>34.117641</td>
-      <td>0.084671</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2.338337</td>
-      <td>34.321649</td>
-      <td>0.094645</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.354600</td>
-      <td>34.545081</td>
-      <td>0.123991</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2.389282</td>
-      <td>34.775350</td>
-      <td>0.125710</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2.419928</td>
-      <td>34.989264</td>
-      <td>0.146251</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -15594,7 +15462,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[:</span><span class="o">-</span><span class="mi">100</span><span class="p">]</span>
@@ -15603,24 +15471,12 @@ $$</p>
 <span class="n">X_without_pH_test</span> <span class="o">=</span> <span class="n">X_without_pH</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[</span><span class="o">-</span><span class="mi">100</span><span class="p">:]</span>
 <span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[:</span><span class="o">-</span><span class="mi">100</span><span class="p">]</span>
 <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[</span><span class="o">-</span><span class="mi">100</span><span class="p">:]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create linear regression object</span>
-<span class="n">regr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="c1"># Train the model using the training sets</span>
-<span class="n">regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">y_hat</span> <span class="o">=</span> <span class="n">regr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_hat</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_without_pH_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_without_pH_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15633,7 +15489,12 @@ $$</p>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(900, 1)
+<pre>(900, 4)
+(100, 4)
+(900, 3)
+(100, 3)
+(900, 1)
+(100, 1)
 </pre>
 </div>
 </div>
@@ -15644,15 +15505,27 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create linear regression object</span>
-<span class="n">regr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-<span class="c1"># Train the model using the training sets</span>
-<span class="n">regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_without_pH_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">y_hat_without_pH</span> <span class="o">=</span> <span class="n">regr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_without_pH_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y_hat_without_pH</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sqrt</span>
+<span class="k">def</span> <span class="nf">get_AIC_and_model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">!=</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">p</span> <span class="o">!=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Check shape&#39;</span><span class="p">)</span>
+    <span class="n">regr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+    <span class="n">regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">y_hat</span> <span class="o">=</span> <span class="n">regr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+    <span class="n">sigma2</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">sigma2</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_hat</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_hat</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">sigma2</span> <span class="o">/=</span> <span class="n">n</span>
+    <span class="n">aic</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">sigma2</span><span class="p">)</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">aic</span><span class="p">,</span> <span class="n">regr</span>
+    
+<span class="n">aic</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">get_AIC_and_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aic</span><span class="p">)</span>
+<span class="n">aic_without_pH</span><span class="p">,</span> <span class="n">model_without_pH</span> <span class="o">=</span> <span class="n">get_AIC_and_model</span><span class="p">(</span><span class="n">X_without_pH_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aic_without_pH</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15665,7 +15538,8 @@ $$</p>
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(900, 1)
+<pre>-5455.266316204699
+-5457.015806556004
 </pre>
 </div>
 </div>
@@ -15676,52 +15550,82 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">check_loss</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">y_predict</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">loss</span> <span class="o">+=</span> <span class="p">(</span><span class="n">y_test</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_predict</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">y_test</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y_predict</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> 
+    <span class="n">loss</span> <span class="o">/=</span> <span class="n">n</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">loss</span>
+
+<span class="n">loss</span> <span class="o">=</span> <span class="n">check_loss</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loss is &quot;</span><span class="p">,</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">loss_without_pH</span> <span class="o">=</span> <span class="n">check_loss</span><span class="p">(</span><span class="n">model_without_pH</span><span class="p">,</span> <span class="n">X_without_pH_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loss is &quot;</span><span class="p">,</span><span class="n">loss_without_pH</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>loss is  0.0117994388457401
+loss is  0.01178894001435908
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">X_without_pH</span> <span class="o">=</span> <span class="n">set_X_with_noise_pH</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[:</span><span class="o">-</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[</span><span class="o">-</span><span class="mi">100</span><span class="p">:]</span>
+<span class="n">X_without_pH_train</span> <span class="o">=</span> <span class="n">X_without_pH</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[:</span><span class="o">-</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">X_without_pH_test</span> <span class="o">=</span> <span class="n">X_without_pH</span><span class="o">.</span><span class="n">as_matrix</span><span class="p">()[</span><span class="o">-</span><span class="mi">100</span><span class="p">:]</span>
+<span class="n">aic</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">get_AIC_and_model</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aic</span><span class="p">)</span>
+<span class="n">aic_without_pH</span><span class="p">,</span> <span class="n">model_without_pH</span> <span class="o">=</span> <span class="n">get_AIC_and_model</span><span class="p">(</span><span class="n">X_without_pH_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="mi">900</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aic_without_pH</span><span class="p">)</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">check_loss</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loss is &quot;</span><span class="p">,</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">loss_without_pH</span> <span class="o">=</span> <span class="n">check_loss</span><span class="p">(</span><span class="n">model_without_pH</span><span class="p">,</span> <span class="n">X_without_pH_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loss is &quot;</span><span class="p">,</span><span class="n">loss_without_pH</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="output_wrapper">
+<div class="output">
 
-</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-50770.54354295933
+-5457.015806556004
+loss is  1.995195904644816e-13
+loss is  0.01178894001435908
+</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
 </div>
 </div>
 
